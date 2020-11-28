@@ -50,7 +50,7 @@ The implementation of the template generator should be your own. You are not all
 Set of requirements for the mail template generator, you should create list of TDD tests for these requirements: 
 
 * The system replaces variable placeholders like #{subject} from a template with values provided at runtime. 
-* If at least for one placeholder value is not provided at runtime – template generator should throw an exception 
+* If aot least for one placeholder value is not provided at runtime – template generator should throw an exceptin 
 * Template generator ignores values for variables provided at runtime that aren’t found from the template. 
 * System should support values passed in runtime with #{…}. E.g. template is  “Some text: #{value}” and  at runtime #{value} passed as  #{tag}. Output should be “Some text: #{tag}”. 
 * The system supports the full Latin-1 character set in templates and in variables. 
