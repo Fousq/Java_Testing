@@ -25,6 +25,6 @@ public class ConsoleTemplateExecutor implements TemplateExecutor {
         } catch (IOException e) {
             logger.error("Error on reading from console. Cause: " + e);
         }
-        System.out.println(templateGenerator.generateContent(template));
+        logger.info(templateGenerator.generateContent(template));
     }
 }

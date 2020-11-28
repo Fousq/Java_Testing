@@ -2,6 +2,7 @@ package kz.zhanbolat.testing;
 
 import kz.zhanbolat.testing.impl.TemplateTagsLoaderImpl;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -9,6 +10,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@EnabledIfSystemProperty(named = "env", matches = "slow-tests-run")
 public class TemplateTagsLoaderTest {
     private TemplateTagsLoader templateTagsLoader;
 

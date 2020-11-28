@@ -25,9 +25,11 @@ public class FileTemplateExecutor implements TemplateExecutor {
 
     @Override
     public void execute() {
-        if (Files.notExists(readFilePath) || Files.notExists(writeFilePath)) {
-            throw new IllegalStateException("One of the file's path is not exists. Paths: " + readFilePath
-                    + ", " + writeFilePath);
+        if (Files.notExists(readFilePath)) {
+            throw new IllegalStateException("Read file doesn't exist. Paths: " + readFilePath);
+        }
+        if (Files.notExists(writeFilePath)) {
+            throw new IllegalStateException("Write file doesn't exist. Paths: " + writeFilePath);
         }
         StringBuilder builder = new StringBuilder();
         try (FileInputStream fileInputStream = new FileInputStream(readFilePath.toFile())) {
