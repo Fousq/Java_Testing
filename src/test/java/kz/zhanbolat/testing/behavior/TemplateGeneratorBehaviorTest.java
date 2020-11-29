@@ -14,7 +14,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TemplateGeneratorStepDefinitions {
+public class TemplateGeneratorBehaviorTest {
     private TemplateGenerator templateGenerator;
     private String template;
     private String content;
